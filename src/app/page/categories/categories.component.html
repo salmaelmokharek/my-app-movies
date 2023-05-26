@@ -1,0 +1,10 @@
+<p>categories works!</p>
+
+
+<div class="container-fluid py-2">
+  <div class="row flex-nowrap overflow-auto" >
+    <div class="col-md-2" *ngFor="let movie of listm">
+      <app-card [item]="movie" ></app-card>
+    </div>
+  </div>
+</div>

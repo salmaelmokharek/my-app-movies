@@ -1,0 +1,25 @@
+
+<div class="card my-2 mx-2" *ngIf="isMovie()">
+  <a [routerLink]="['/movie', item.id]" >
+    <div style="position: relative;" >
+      <img class="card-img-top" [src]="resolveImage(item.poster_path)" [alt]="item.original_title">
+      <button type="button" class="btn btn-primary btn-sm" style="position: absolute; top: 0; right: 0;">{{item.vote_average}}</button>
+    </div>
+  </a>
+ <div class="card-body">
+     <h6 class="card-title">{{item.original_title}}</h6>
+  </div>
+</div>
+
+
+<div  class="card my-2" *ngIf="isTV()" >
+  <a [routerLink]="['/tv', tv.id]">
+    <div style="position: relative;">
+      <img class="card-img-top" [src]="resolveImage(tv.poster_path)" [alt]="tv.original_name">
+      <button type="button" class="btn btn-primary btn-sm" style="position: absolute; top: 0; right: 0;">{{tv.vote_average}}</button>
+    </div>
+  </a>
+ <div class="card-body">
+     <h6 class="card-title">{{tv.original_name}}</h6>
+  </div>
+</div>

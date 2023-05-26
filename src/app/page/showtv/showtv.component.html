@@ -1,0 +1,46 @@
+<div class="row">
+  <div class="col-md-2 text-center my-3">{{showtv.vote_count}}</div>
+  <div class="col-md-2 text-center my-3">{{showtv.vote_average|number:'1.1-1'}}/10</div>
+  <div class="col-md-2 text-center my-3">{{showtv.status}}</div>
+  <div class="col-md-2 text-center my-3"> Season :{{showtv.number_of_seasons}}</div>
+  <div class="col-md-2 text-center my-3"> Episode :{{showtv.number_of_episodes}}</div>
+  <div class="col-md-2 text-center my-3"> </div>
+
+</div>
+
+<div class="row">
+  <div class="col-md-12">
+    <app-slider [tvs]="[showtv]"></app-slider>
+  </div>
+</div>
+
+
+<hr>
+
+<div class="row">
+    <div class="col-md-6 mx-auto">
+
+        <ul class="nav nav-pills nav-fill">
+          <li class="nav-item">
+            <a class="nav-link" routerLinkActive="active" aria-current="page" routerLink="seasons">Seasons</a>
+          </li>
+            <li class="nav-item">
+              <a class="nav-link" routerLinkActive="active" routerLink="similar">Similar</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" routerLinkActive="active" routerLink="actors">Actors</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" routerLinkActive="active" routerLink="imageq">Images</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" routerLinkActive="active" routerLink="videos">Videos</a>
+            </li>
+
+          </ul>
+
+    </div>
+</div>
+
+<hr>
+<router-outlet></router-outlet>

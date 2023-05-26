@@ -1,0 +1,18 @@
+
+.card{
+  border-color: blueviolet;
+
+}
+.card-body{
+  height: 100px;
+}
+.card-img-top{
+  height: 270px;
+}
+.card-title {
+  font-family: Trajan, serif;
+  color: #ffffff;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
